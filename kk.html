@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: white;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 15px;
+            border: 1px solid black;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            flex-grow: 1;
+            margin: 5px;
+        }
+        .collapsible:hover {
+            background-color: #f8f8f8;
+        }
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: white;
+            color: black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Property Management Co.</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <button type="button" class="collapsible">Properties</button>
+            <button type="button" class="collapsible">Landlords</button>
+            <button type="button" class="collapsible">Tenants</button>
+            <button type="button" class="collapsible">About Us</button>
+            <button type="button" class="collapsible">Contact Us</button>
+        </div>
+        <div class="content">
+            <p>Information about the property management company.</p>
+        </div>
+        <div class="content">
+            <p>Description of Property 1.</p>
+            <p>Description of Property 2.</p>
+        </div>
+        <div class="content">
+            <p>Contact information and/or form goes here.</p>
+        </div>
+        <div class="content">
+            <p>Established in 2015, our property management company has 
+                been dedicated to providing top-notch real estate management services 
+                in the vibrant KW area. With a deep understanding of the local market and extensive industry experience, 
+                we have always adhered to a customer-centric approach, continuously improving our service quality and efficiency. 
+                Our range of services includes, but is not limited to, property maintenance, lease management, financial planning, and legal
+                 consultation. Our team of professionals is equipped with a wealth of experience, offering tailor-made solutions 
+                 to ensure our clients' properties are managed effectively and efficiently.</p>
+        </div>
+        <div class="content">
+            <p>Information about the property management company.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Property Management Co.</p>
+        </div>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var content = document.getElementsByClassName("content");
+        var i;
+
+        function collapseAllExcept(activeIndex) {
+            for (let j = 0; j < content.length; j++) {
+                if (j !== activeIndex) {
+                    content[j].style.maxHeight = null;
+                    coll[j].classList.remove("active");
+                }
+            }
+        }
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                var index = Array.prototype.indexOf.call(coll, this);
+                collapseAllExcept(index);
+
+                this.classList.toggle("active");
+                var currentContent = content[index];
+                if (currentContent.style.maxHeight) {
+                    currentContent.style.maxHeight = null;
+                } else {
+                    currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+</html>
+
+
