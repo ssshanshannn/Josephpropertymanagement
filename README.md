@@ -1,5 +1,5 @@
 Open terminal first
-#Push:
+# Push:
 1.
 ```shell
 git add *
@@ -13,7 +13,7 @@ git commit -m "comment msg"
 git push
 ```
 
-#Pull:
+# Pull:
 ```shell
 git pull
 ```
