@@ -1,19 +1,19 @@
 Open terminal first
 #Push:
 1.
-'''shell
+```shell
 git add *
-'''
+```
 2.
-'''shell
+```shell
 git commit -m "comment msg"
-'''
+```
 3.
-'''shell
+```shell
 git push
-'''
+```
 
 #Pull:
-'''shell
+```shell
 git pull
-'''
+```
