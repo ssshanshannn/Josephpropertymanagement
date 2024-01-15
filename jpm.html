@@ -72,7 +72,7 @@
         .houses-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: flex-start;
         }
 
@@ -125,14 +125,31 @@
             background-color: #555;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
+        .modal {
+            display: none;
             position: fixed;
-            bottom: 0;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -177,54 +194,58 @@
     <section id="properties">
         <h2>Properties</h2>
         <div class="houses-container">
-            <div class="house-listing">
-                <img src="1.jpg" alt="House 1" class="house-img">
+            <div class="house-listing" onclick="openModal('Modern Family Home', './figure/h1/original-BF9EA5ED-4E0C-4CF4-893D-56CC1C659778.jpeg', 6, 3.5)">
+                <img src="./figure/h1/original-BF9EA5ED-4E0C-4CF4-893D-56CC1C659778.jpeg" alt="House 1" class="house-img">
                 <div class="house-details">
                     <h3><a href="#">Modern Family Home</a></h3>
-                    <p><i class="icofont-bed"></i> 4 beds</p>
-                    <p><i class="icofont-bathtub"></i> 3 baths</p>
-                </div>
-            </div>
-
-            <div class="house-listing">
-                <img src="1.jpg" alt="House 2" class="house-img">
-                <div class="house-details">
-                    <h3><a href="#">Cozy Cottage</a></h3>
-                    <p><i class="icofont-bed"></i> 3 beds</p>
-                    <p><i class="icofont-bathtub"></i> 2 baths</p>
+                    <p><i class="icofont-bed"></i> 6 beds</p>
+                    <p><i class="icofont-bathtub"></i> 3.5 baths</p>
                 </div>
             </div>
     
-            <div class="house-listing">
-                <img src="1.jpg" alt="House 3" class="house-img">
+            <div class="house-listing" onclick="openModal('Cozy Cottage', './figure/h2/processed-5C3587E3-C5CA-437E-BF85-80BA0398BD26-7BD9E063-F393-475C-85F1-C5F3EA55B15D.jpeg', 4, 2.5)">
+                <img src="./figure/h2/processed-5C3587E3-C5CA-437E-BF85-80BA0398BD26-7BD9E063-F393-475C-85F1-C5F3EA55B15D.jpeg" alt="House 2" class="house-img">
                 <div class="house-details">
-                    <h3><a href="#">The Hub</a></h3>
-                    <p><i class="icofont-bed"></i> 5 beds</p>
-                    <p><i class="icofont-bathtub"></i> 4 baths</p>
+                    <h3><a href="#">Cozy Cottage</a></h3>
+                    <p><i class="icofont-bed"></i> 4 beds</p>
+                    <p><i class="icofont-bathtub"></i> 2.5 baths</p>
                 </div>
             </div>
             
-            <div class="house-listing">
-                <img src="1.jpg" alt="House 4" class="house-img">
+            <div class="house-listing" onclick="openModal('Quaint Cabin', './figure/h3/WechatIMG4633.jpg', 2, 1)">
+                <img src="./figure/h3/WechatIMG4633.jpg" alt="House 3" class="house-img">
                 <div class="house-details">
-                    <h3><a href="#">The Hub</a></h3>
-                    <p><i class="icofont-bed"></i> 5 beds</p>
-                    <p><i class="icofont-bathtub"></i> 4 baths</p>
+                    <h3><a href="#">Quaint Cabin</a></h3>
+                    <p><i class="icofont-bed"></i> 2 beds</p>
+                    <p><i class="icofont-bathtub"></i> 1 bath</p>
                 </div>
-            </div>
-
-            <div class="house-listing">
-                <img src="1.jpg" alt="House 4" class="house-img">
-                <div class="house-details">
-                    <h3><a href="#">The Hub</a></h3>
-                    <p><i class="icofont-bed"></i> 5 beds</p>
-                    <p><i class="icofont-bathtub"></i> 4 baths</p>
-                </div>
-            </div>
-
-
+            </div> 
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(propertyTitle) {
+            document.getElementById('modalTitle').innerText = propertyTitle;
+
+            document.getElementById('modalContent').innerHTML = `
+                <img src="./figure/h1/original-BF9EA5ED-4E0C-4CF4-893D-56CC1C659778.jpeg" alt="${propertyTitle}">
+                <!-- Add more images if needed -->
+            `;
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
 
     <section id="contact">
         <h2>Contact Us</h2>
