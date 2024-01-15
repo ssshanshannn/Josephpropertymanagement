@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Property Management Inc.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./icofont/icofont.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .houses-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .house-listing {
+            width: calc(25% - 15px);
+            margin: 10px 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .house-img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .house-details {
+            padding: 10px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Joseph Property Management Inc.</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#properties">Properties</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Joseph Property Management Inc</h2>
+        <p>[Brief description of your company]</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>[Information about your company, history, mission, etc.]</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>[Details about services like property management, rental guarantees, etc.]</p>
+    </section>
+
+    <section id="properties">
+        <h2>Properties</h2>
+        <div class="houses-container">
+            <div class="house-listing">
+                <img src="1.jpg" alt="House 1" class="house-img">
+                <div class="house-details">
+                    <h3><a href="#">Modern Family Home</a></h3>
+                    <p><i class="icofont-bed"></i>4 beds</p>
+                    <p><i class="icofont-bathtub"></i>3 baths</p>
+                </div>
+            </div>
+
+            <!-- Add more house listings as needed -->
+            <div class="house-listing">
+                <img src="1.jpg" alt="House 2" class="house-img">
+                <div class="house-details">
+                    <h3><a href="#">Cozy Cottage</a></h3>
+                    <p><i class="icofont-bed"></i>3 beds</p>
+                    <p><i class="icofont-bathtub"></i>2 baths</p>
+                </div>
+            </div>
+    
+            <div class="house-listing">
+                <img src="1.jpg" alt="House 3" class="house-img">
+                <div class="house-details">
+                    <h3><a href="#">The Hub</a></h3>
+                    <p><i class="icofont-bed"></i>5 beds</p>
+                    <p><i class="icofont-bathtub"></i>4 baths</p>
+                </div>
+            </div>
+            
+            <div class="house-listing">
+                <img src="1.jpg" alt="House 4" class="house-img">
+                <div class="house-details">
+                    <h3><a href="#">The Hub</a></h3>
+                    <p><i class="icofont-bed"></i>5 beds</p>
+                    <p><i class="icofont-bathtub"></i>4 baths</p>
+                </div>
+            </div>
+
+            <div class="house-listing">
+                <img src="1.jpg" alt="House 4" class="house-img">
+                <div class="house-details">
+                    <h3><a href="#">The Hub</a></h3>
+                    <p><i class="icofont-bed"></i>5 beds</p>
+                    <p><i class="icofont-bathtub"></i>4 baths</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Joseph Property Management Inc.</p>
+    </footer>
+
+</body>
+</html>
