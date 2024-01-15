@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #121212; /* Dark background */
+            color: #f0f0f0; /* Light text color for contrast */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #1c1c1c; /* Slightly lighter dark shade for container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        header {
+            background: #000000; /* Black header background */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .collapsible {
+            background-color: #333333; /* Dark grey for buttons */
+            color: #ffffff;
+            cursor: pointer;
+            padding: 15px;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 18px;
+            flex-basis: 45%;
+            margin: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .collapsible:hover {
+            background-color: #4d4d4d; /* Lighter grey on hover */
+            transform: translateY(-2px);
+        }
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            border: 1px solid #333333;
+            border-top: none;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Property Management Co.</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Content goes here -->
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Property Management Co.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for collapsible elements -->
+</body>
+</html>
+
