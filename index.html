@@ -29,6 +29,12 @@
             text-decoration: none;
             font-size: 2em;
             font-weight: bold;
+            animation: breathe 2.7s linear infinite alternate;
+        }
+
+        header h1:hover {
+            animation-play-state: paused;
+            cursor: pointer;
         }
 
         nav {
@@ -289,6 +295,25 @@
                 border-top-right-radius: 8px;
                 overflow: hidden;
             }
+        }
+
+        @keyframes breathe {
+            0% {
+                opacity: 0.25;
+            }
+
+            25% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.75;
+            }
+
+            100% {
+                opacity: 1;
+            }
+            
         }
     </style>
 </head>
